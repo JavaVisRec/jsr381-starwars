@@ -1,0 +1,10 @@
+.idea/
+*.iml
+.gradle/
+gradle/
+build/**
+target/**
+*.asc
+/target/
+nb*.xml
+logs/
