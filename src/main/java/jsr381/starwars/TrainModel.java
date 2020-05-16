@@ -16,7 +16,7 @@ public class TrainModel {
                 .imageHeight(50)
                 .imageWidth(50)
                 .labelsFile(new File("deepnetts/labels.txt"))
-                .trainingFile(new File("deepnetts/rain.txt"))
+                .trainingFile(new File("deepnetts/train.txt"))
                 .networkArchitecture(new File("deepnetts/arch.json"))
                 .exportModel(Paths.get("deepnetts/trained_model.dnet"))
                 .maxError(0.03f)
