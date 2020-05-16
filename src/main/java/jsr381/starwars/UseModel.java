@@ -39,6 +39,7 @@ public class UseModel {
                 .inputClass(BufferedImage.class)
                 .imageHeight(50)
                 .imageWidth(50)
+                // Replace with "deepnetts/trained_model.dnet" to use your own trained model
                 .importModel(Paths.get("starwars.dnet"))
                 .build();
     }
