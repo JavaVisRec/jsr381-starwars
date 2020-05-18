@@ -1,5 +1,5 @@
 # Use the Force
-This example trains and uses a really simple machine learning model using JSR-381.
+This example trains and uses a simple machine learning model using JSR-381.
 
 Before getting started, the example was created using IntelliJ and JDK11 of GraalVM. You may need to adjust
 the set paths in the code to different relative locations. And using any other Java 11 JVM should do fine as well.
