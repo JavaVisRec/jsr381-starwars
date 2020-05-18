@@ -21,7 +21,7 @@ public class UseModel {
                 .build();
 
         // Tie Fighter
-        List<File> tieFighters = List.of(
+        var tieFighters = List.of(
                 new File("test_images/tie_fighter/1.jpg"),
                 new File("test_images/tie_fighter/2.jpg"),
                 new File("test_images/tie_fighter/3.jpg")
@@ -31,7 +31,7 @@ public class UseModel {
                 .forEach(System.out::println);
 
         // Millennium Falcon
-        List<File> falcons = List.of(
+        var falcons = List.of(
                 new File("test_images/millennium_falcon/1.jpg"),
                 new File("test_images/millennium_falcon/2.jpg"),
                 new File("test_images/millennium_falcon/3.jpg")
