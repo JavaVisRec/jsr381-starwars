@@ -48,8 +48,6 @@ public class ClassifierController {
 
         openImageBtn.setDisable(true);
         classifyBtn.setDisable(true);
-//        image.setImage(new Image("file:///Users/kevin/Workspace/JavaVisRec/jsr381-starwars/test_images/millennium_falcon/1.jpg"));
-//        centerImage();
     }
 
     @FXML
