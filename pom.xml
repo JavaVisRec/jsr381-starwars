@@ -28,6 +28,13 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- OpenJFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>14</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -39,6 +46,14 @@
                     <compilerVersion>11</compilerVersion>
                     <source>11</source>
                     <target>11</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.4</version>
+                <configuration>
+                    <mainClass>jsr381.starwars.fx.ClassifierApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

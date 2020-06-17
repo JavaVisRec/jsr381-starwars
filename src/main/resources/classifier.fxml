@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jsr381.starwars.fx.ClassifierController">
+    <children>
+        <MenuBar fx:id="menu" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="openModelBtn" mnemonicParsing="false" onAction="#openModel" text="Open Model..." />
+                        <MenuItem fx:id="openImageBtn" mnemonicParsing="false" onAction="#openImage" text="Open Image..." />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView id="image" fx:id="image" fitHeight="301.0" fitWidth="609.0" layoutX="16.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="classifyBtn" layoutX="551.0" layoutY="331.0" mnemonicParsing="false" onAction="#classifyImage" text="Classify" AnchorPane.rightAnchor="22.5" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

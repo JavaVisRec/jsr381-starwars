@@ -20,7 +20,7 @@ public class TrainModel {
                 .networkArchitecture(new File("deepnetts/arch.json"))
                 .exportModel(Paths.get("deepnetts/trained_model.dnet"))
                 .maxError(0.03f)
-                .maxEpochs(1000)
+                .maxEpochs(100)
                 .learningRate(0.01f)
                 .build();
     }
