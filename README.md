@@ -23,3 +23,12 @@ Run this Java file to use the model:
 ```
 jsr381.starwars.UseModel
 ```
+
+## JavaFX application
+To start the JavaFX application, run `mvn javafx:run` in the root of the project.
+
+* You'd have to open the model first by going to menu: File -> Open Model...
+* Select a DeepNetts trained model like from this project.
+* Then open an image by going to the menu: File -> Open Image...
+* Select a proper image and it will show up in the center of the application
+* Then click on classify to get the classification results.
