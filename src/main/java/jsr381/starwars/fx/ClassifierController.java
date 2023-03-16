@@ -12,12 +12,14 @@ import javafx.stage.FileChooser;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.visrec.ml.ClassifierCreationException;
 import javax.visrec.ml.classification.ImageClassifier;
 import javax.visrec.ml.classification.NeuralNetImageClassifier;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.stream.Collectors;
+import javax.visrec.ml.model.ModelCreationException;
 
 public class ClassifierController {
 
@@ -62,7 +64,7 @@ public class ClassifierController {
                     .build();
             openImageBtn.setDisable(false);
             System.out.println("Loaded model");
-        } catch (ClassifierCreationException e) {
+        } catch (ModelCreationException e) {
             System.out.println(e);
             openImageBtn.setDisable(true);
         } finally {
@@ -92,7 +94,7 @@ public class ClassifierController {
 
     @FXML
     private void classifyImage(ActionEvent event) {
-        var results = classifier.classify(imageFile);
+        var results = classifier.classify(imageFile.toPath());
         var sortedResults = results.entrySet().stream()
                 .map(e -> Result.builder().name(e.getKey()).accuracy(e.getValue()).build())
                 .sorted((v1, v2) -> v1.accuracy > v2.accuracy ? 1 : -1)

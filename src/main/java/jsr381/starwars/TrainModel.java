@@ -4,7 +4,6 @@ import lombok.SneakyThrows;
 
 import javax.visrec.ml.classification.NeuralNetImageClassifier;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.nio.file.Paths;
 
 public class TrainModel {
@@ -15,9 +14,9 @@ public class TrainModel {
                 .inputClass(BufferedImage.class)
                 .imageHeight(50)
                 .imageWidth(50)
-                .labelsFile(new File("deepnetts/labels.txt"))
-                .trainingFile(new File("deepnetts/train.txt"))
-                .networkArchitecture(new File("deepnetts/arch.json"))
+                .labelsFile(Paths.get("deepnetts/labels.txt"))
+                .trainingFile(Paths.get("deepnetts/train.txt"))
+                .networkArchitecture(Paths.get("deepnetts/arch.json"))
                 .exportModel(Paths.get("deepnetts/trained_model.dnet"))
                 .maxError(0.03f)
                 .maxEpochs(100)

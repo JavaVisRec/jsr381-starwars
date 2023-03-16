@@ -4,7 +4,6 @@ import lombok.SneakyThrows;
 
 import javax.visrec.ml.classification.NeuralNetImageClassifier;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -22,9 +21,9 @@ public class UseModel {
 
         // Tie Fighter
         var tieFighters = List.of(
-                new File("test_images/tie_fighter/1.jpg"),
-                new File("test_images/tie_fighter/2.jpg"),
-                new File("test_images/tie_fighter/3.jpg")
+                Paths.get("test_images/tie_fighter/1.jpg"),
+                Paths.get("test_images/tie_fighter/2.jpg"),
+                Paths.get("test_images/tie_fighter/3.jpg")
         );
         tieFighters.stream()
                 .map(classifier::classify)
@@ -32,9 +31,9 @@ public class UseModel {
 
         // Millennium Falcon
         var falcons = List.of(
-                new File("test_images/millennium_falcon/1.jpg"),
-                new File("test_images/millennium_falcon/2.jpg"),
-                new File("test_images/millennium_falcon/3.jpg")
+                Paths.get("test_images/millennium_falcon/1.jpg"),
+                Paths.get("test_images/millennium_falcon/2.jpg"),
+                Paths.get("test_images/millennium_falcon/3.jpg")
         );
         falcons.stream()
                 .map(classifier::classify)
